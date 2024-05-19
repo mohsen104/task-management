@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Kalameh";
+    src:
+        url("/public/fonts/woff/KalamehWeb-Thin.woff") format("woff"),
+        url("/public/fonts/woff2/KalamehWeb-Thin.woff2") format("woff2");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Kalameh";
+    src:
+        url("/public/fonts/woff/KalamehWeb-ExtraLight.woff") format("woff"),
+        url("/public/fonts/woff2/KalamehWeb-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Kalameh";
+    src:
+        url("/public/fonts/woff/KalamehWeb-Light.woff") format("woff"),
+        url("/public/fonts/woff2/KalamehWeb-Light.woff2") format("woff2");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Kalameh";
+    src:
+        url("/public/fonts/woff/KalamehWeb-Regular.woff") format("woff"),
+        url("/public/fonts/woff2/KalamehWeb-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Kalameh";
+    src:
+        url("/public/fonts/woff/KalamehWeb-Medium.woff") format("woff"),
+        url("/public/fonts/woff2/KalamehWeb-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Kalameh";
+    src:
+        url("/public/fonts/woff/KalamehWeb-SemiBold.woff") format("woff"),
+        url("/public/fonts/woff2/KalamehWeb-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Kalameh";
+    src:
+        url("/public/fonts/woff/KalamehWeb-Bold.woff") format("woff"),
+        url("/public/fonts/woff2/KalamehWeb-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Kalameh";
+    src:
+        url("/public/fonts/woff/KalamehWeb-ExtraBold.woff") format("woff"),
+        url("/public/fonts/woff2/KalamehWeb-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Kalameh";
+    src:
+        url("/public/fonts/woff/KalamehWeb-Black.woff") format("woff"),
+        url("/public/fonts/woff2/KalamehWeb-Black.woff2") format("woff2");
+    font-weight: 900;
+}
+
+* {
+    text-wrap: balance;
+    font-family: "Kalameh";
+    direction: rtl;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+main {
+    height: 100vh;
+}
+
+img {
+    width: fit-content;
+    height: fit-content;
+}
+
+button {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.overscroll {
+    scrollbar-width: none;
+}
+
+.statusTask {
+    background-image:
+        linear-gradient(45deg, transparent 50%, white 50%),
+        linear-gradient(135deg, white 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(1em),
+        calc(100% - 15px) calc(1em),
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.filterHeader {
+    background: linear-gradient(127deg, #575de880 0%, #009bf8 100%);
+    @apply absolute left-0 top-0 right-0 bottom-0 w-full h-full object-cover opacity-40 backdrop-blur-3xl
+}
+
+.ectText--2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+[name='avatar']:checked+label>img {
+    outline: 2px solid #f87171;
+    filter: brightness(1);
+}
+
+[name='avatar']+label>img {
+    filter: brightness(0.75);
+}
+
+.online{
+    position: relative;
+}
+
+.online::after{
+    content: "";
+    @apply absolute right-0 bottom-0 bg-green-500 w-4 h-4 rounded-full border-2 border-white
+}
