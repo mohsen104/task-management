@@ -61,29 +61,29 @@ function Avatar({ isOpenAv, setIsOpenAv, _id, avatarDefault, setAvatarDefault })
                                 >
                                     آواتار خود را انتخاب کنید :
                                 </Dialog.Title>
-                                <div className="mt-4 flex flex-row items-center gap-4">
+                                <div className="mt-4 flex flex-row items-center justify-center gap-4">
                                     <div>
                                         <input type="radio" name='avatar' id='avatar1' hidden value={"avatar1"} checked={avatarValue == "avatar1"} onChange={(e) => setAvatarValue(e.target.value)} />
                                         <label htmlFor="avatar1">
-                                            <img src="avatar1.avif" alt="" className='cursor-pointer w-20 h-20 rounded-full' />
+                                            <img src="avatar1.avif" alt="" className='cursor-pointer w-20 h-20 max-lg:w-16 max-lg:h-16 rounded-full' />
                                         </label>
                                     </div>
                                     <div>
                                         <input type="radio" name='avatar' id='avatar2' hidden value={"avatar2"} checked={avatarValue == "avatar2"} onChange={(e) => setAvatarValue(e.target.value)} />
                                         <label htmlFor="avatar2">
-                                            <img src="avatar2.avif" alt="" className='cursor-pointer w-20 h-20 rounded-full' />
+                                            <img src="avatar2.avif" alt="" className='cursor-pointer w-20 h-20 max-lg:w-16 max-lg:h-16 rounded-full' />
                                         </label>
                                     </div>
                                     <div>
                                         <input type="radio" name='avatar' id='avatar3' hidden value={"avatar3"} checked={avatarValue == "avatar3"} onChange={(e) => setAvatarValue(e.target.value)} />
                                         <label htmlFor="avatar3">
-                                            <img src="avatar3.avif" alt="" className='cursor-pointer w-20 h-20 rounded-full' />
+                                            <img src="avatar3.avif" alt="" className='cursor-pointer w-20 h-20 max-lg:w-16 max-lg:h-16 rounded-full' />
                                         </label>
                                     </div>
                                     <div>
                                         <input type="radio" name='avatar' id='avatar4' hidden value={"avatar4"} checked={avatarValue == "avatar4"} onChange={(e) => setAvatarValue(e.target.value)} />
                                         <label htmlFor="avatar4">
-                                            <img src="avatar4.avif" alt="" className='cursor-pointer w-20 h-20 rounded-full' />
+                                            <img src="avatar4.avif" alt="" className='cursor-pointer w-20 h-20 max-lg:w-16 max-lg:h-16 rounded-full' />
                                         </label>
                                     </div>
                                 </div>

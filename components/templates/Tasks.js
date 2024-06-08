@@ -8,7 +8,7 @@ function Tasks({ tasks, members, setTasksReal, role, _id }) {
   return (
     <>
       <TaskNew members={members} isOpen={isOpen} setIsOpen={setIsOpen} setTasksReal={setTasksReal} role={role} _id={_id} />
-      <div className='ml-6 mb-6 bg-white flex flex-col p-4 col-span-11 row-span-5 overflow-y-scroll overscroll gap-6 rounded-xl shadow-lg'>
+      <div className='max-lg:m-3 max-lg:mt-0 max-lg:col-span-full ml-6 mb-6 bg-white flex flex-col p-4 col-span-11 row-span-5 overflow-y-scroll overscroll gap-6 rounded-xl shadow-lg'>
         <div className='flex flex-row items-center'>
           <div onClick={() => setIsOpen(true)} className='flex items-center justify-center py-2.5 px-3.5 bg-[#575DE8] fill-white text-white gap-1 rounded-full cursor-pointer shadow-lg shadow-[#D3D5FF]'>
             <p>تسک جدید</p>

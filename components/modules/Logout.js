@@ -58,7 +58,7 @@ function Logout({ isOpen, setIsOpen }) {
                                 </div>
                                 <div className="flex items-center justify-center">
                                     <div className='grid grid-cols-2 gap-2.5 w-[50%]'>
-                                        <button onClick={() => logoutFetch()} className='mt-6 w-full text-center bg-red-500 text-white rounded-md py-1.5 uppercase'>حذف</button>
+                                        <button onClick={() => logoutFetch()} className='mt-6 w-full text-center bg-red-500 text-white rounded-md py-1.5 uppercase'>خروج</button>
                                         <button onClick={() => setIsOpen(false)} className='mt-6 w-full text-center text-black rounded-md py-1.5 uppercase'>لغو</button>
                                     </div>
                                 </div>

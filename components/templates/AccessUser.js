@@ -32,10 +32,10 @@ function AccessUser({ userlist }) {
     }
   }
   return (
-    <div className='ml-6 mb-6 bg-white flex flex-col p-4 col-span-11 row-span-5 overflow-y-scroll overscroll gap-6 rounded-xl shadow-lg'>
+    <div className='max-lg:m-3 max-lg:mt-0 max-lg:col-span-full ml-6 mb-6 bg-white flex flex-col p-4 col-span-11 row-span-5 overflow-y-scroll overscroll gap-6 rounded-xl shadow-lg'>
       <div className='flex flex-col'>
-        <div className='flex flex-row items-center justify-between'>
-          <p className='text-2xl font-semibold mb-4'>سلام !</p>
+        <div className='flex flex-row items-center justify-between max-lg:py-4'>
+          <p className='text-2xl font-semibold mb-4 max-lg:mb-0'>سلام !</p>
           <div onClick={() => accessFetch()} className="w-fit flex items-center justify-center py-2.5 px-8 bg-[#575DE8] fill-white text-white gap-1 rounded-full cursor-pointer shadow-lg shadow-[#D3D5FF]">
             <p>ثبت</p>
             <IoIosCheckmarkCircleOutline size={20} />
@@ -53,7 +53,7 @@ function AccessUser({ userlist }) {
         <p className='text-md mb-1 text-gray-500'>
           در نهایت کلید ثبت را فراموش نکنید
         </p>
-        <div className='grid grid-cols-2 gap-4 w-1/2'>
+        <div className='grid grid-cols-2 gap-4 w-1/2 max-lg:w-full'>
           <Access selected={selected} setSelected={setSelected} people={userlist} />
           <Role selectedRole={selectedRole} setSelectedRole={setSelectedRole} roles={roles} />
         </div>

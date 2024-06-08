@@ -24,15 +24,17 @@ function Task({ _id, title, desc, user, link, highlight, highlightColor, time, s
             break;
     }
     return (
-        <div className={`h-fit py-4 px-5 grid ${router.pathname == "/tasklist" ? "grid-cols-6" : "grid-cols-5"} items-center justify-between gap-4 rounded-xl shadow-lg`}>
-            <p className='w-fit font-semibold text-lg'>{title}</p>
-            {highlight ? <p style={{ backgroundColor: highlightColor + "1a", color: highlightColor }} className='mx-auto w-fit rounded-md p-2 text-white'>{highlight}</p> : <p></p>}
+        <div className={`h-fit py-4 px-5 grid ${router.pathname == "/tasklist" ? "max-lg:grid-cols-4 grid-cols-6" : "max-lg:grid-cols-4 grid-cols-5"} items-center justify-between gap-4 rounded-xl shadow-lg`}>
+            <p className='w-fit font-semibold text-lg max-lg:text-sm'>{title}</p>
+            {highlight
+            ? <p style={{ backgroundColor: highlightColor + "1a" , color: highlightColor }} className='max-lg:hidden mx-auto w-fit rounded-md p-2 text-white'>{highlight}</p>
+            : <p className='max-lg:hidden'></p>}
             <p className={`${bgStatus} mx-auto w-fit rounded-md p-2 ${colorStatus}`}>{status}</p>
-            <p className='w-fit mx-auto'>{setTime ? `${setTime}` : ""}</p>
+            <p className={`w-fit mx-auto ${router.pathname == "/tasklist" ? "max-lg:hidden" : ""}`}>{setTime ? `${setTime}` : ""}</p>
             {
                 router.pathname == "/tasklist"
                     ?
-                    <p className='w-fit mx-auto'>{user.firstname} {user.lastname}</p>
+                    <p className='w-fit mx-auto max-lg:text-sm'>{user.firstname} {user.lastname}</p>
                     : ""
             }
             <div className='flex justify-end'>

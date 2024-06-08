@@ -7,8 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors:{
-        "black":"#2C2C2C"
+      colors: {
+        "black": "#2C2C2C"
+      },
+      dropShadow: {
+        'custom': '2px 2px 0px #444AD02d',
       }
     },
   },

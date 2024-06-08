@@ -26,7 +26,7 @@ function Navbar({ user }) {
         <>
             <Avatar _id={user._id} avatarDefault={avatarDefault} setAvatarDefault={setAvatarDefault} isOpenAv={isOpenAv} setIsOpenAv={setIsOpenAv} />
             <Logout isOpen={isOpen} setIsOpen={setIsOpen} />
-            <nav className="shadow-md col-span-full row-span-1 py-4 px-10 flex flex-row items-center justify-between bg-white">
+            <nav className="max-lg:px-5 max-lg:flex-col max-sm:row-span-1 max-lg:row-span-2  shadow-md col-span-full row-span-1 py-4 px-10 flex flex-row items-center justify-between bg-white">
                 <Link href={"/"}><img src={router.pathname == "/login" ? "logo-white.png" : "logo.png"} alt="" className='h-12' /></Link>
                 <div className='flex flex-row gap-4 items-center'>
                     <div onClick={() => setIsOpenAv(true)} className='flex flex-row items-center bg-gray-50 rounded-full cursor-pointer'>

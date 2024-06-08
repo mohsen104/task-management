@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Tooltip id="my-tooltip" />
-      <main className='grid grid-cols-12 grid-rows-6 gap-4 bg-gray-50'>
+      <main className='max-lg:gap-2 grid grid-cols-12 grid-rows-6 gap-4 bg-gray-50'>
         <Component {...pageProps} onlineUsers={onlineUsers} setOnlineUsers={setOnlineUsers} />
       </main>
     </>
