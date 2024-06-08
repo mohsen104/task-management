@@ -31,10 +31,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Change permissions by 'master'
 - New ,Edit and Remove task 
 - Real time Online or Offline
-### Authentication
+## Authentication
 
 Implementation of 0 to 100 full-stack authentication capabilities with NodeJS and MongoDB
-### Socket.io
+## Socket.io
 
 Using socket.io to check whether group members are online or offline
 ## Environment Variables
