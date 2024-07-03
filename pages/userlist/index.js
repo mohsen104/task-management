@@ -13,7 +13,7 @@ function index({ user, userlist, onlineUsers, setOnlineUsers }) {
 
   useEffect(() => {
     const socketInitializer = async () => {
-      await fetch('/api/socket');
+      await fetch('http://localhost:3000/api/socket');
 
       socket = io()
 

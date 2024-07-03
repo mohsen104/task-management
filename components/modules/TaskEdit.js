@@ -6,9 +6,9 @@ import Status from './Status';
 import { realtimeTasks, realtimeTasksUser } from '@/utils/realtime';
 import { useRouter } from 'next/router';
 
-function TaskEdit({ isOpenTE, setIsOpenTE, title, desc, time, status, _id, link, setTasksReal,userid }) {
+function TaskEdit({ isOpenTE, setIsOpenTE, title, desc, time, status, _id, link, setTasksReal, userid }) {
 
-    const router=useRouter();
+    const router = useRouter();
 
     const statusSelectedMain = status;
 
@@ -36,7 +36,7 @@ function TaskEdit({ isOpenTE, setIsOpenTE, title, desc, time, status, _id, link,
                 setIsOpenTE(false);
                 if (router.pathname == "/") {
                     realtimeTasksUser(setTasksReal, userid);
-                }else{
+                } else {
                     realtimeTasks(setTasksReal);
                 }
                 Swal.fire({

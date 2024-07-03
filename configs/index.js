@@ -4,7 +4,7 @@ const ConnectToDB = async () => {
         if (mongoose.connections[0].readyState) {
             return false;
         }
-        await mongoose.connect(process.env.DB_URL_LOCAL);
+        await mongoose.connect(process.env.DB_URL);
     } catch (error) {
         console.log(error);
     }

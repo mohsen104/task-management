@@ -4,15 +4,15 @@ import { useRouter } from 'next/router';
 import React, { Fragment } from 'react'
 import Swal from 'sweetalert2';
 
-function TaskDelete({ isOpenTD, setIsOpenTD, _id, setTasksReal,userid }) {
-    const router=useRouter();
+function TaskDelete({ isOpenTD, setIsOpenTD, _id, setTasksReal, userid }) {
+    const router = useRouter();
     async function taskDeleteFetch() {
         await fetch("http://localhost:3000/api/tasks/taskid/" + _id, { method: "DELETE" })
             .then(() => {
                 setIsOpenTD(false)
                 if (router.pathname == "/") {
                     realtimeTasksUser(setTasksReal, userid);
-                }else{
+                } else {
                     realtimeTasks(setTasksReal);
                 }
                 Swal.fire({

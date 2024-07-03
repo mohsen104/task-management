@@ -13,7 +13,7 @@ function index({ user, userlist, setOnlineUsers }) {
 
   useEffect(() => {
     const socketInitializer = async () => {
-      await fetch('/api/socket');
+      await fetch('http://localhost:3000/api/socket');
 
       socket = io()
 
@@ -89,7 +89,7 @@ export async function getServerSideProps(context) {
 
     const user = await model.findOne({ $or: [{ username: tokenPayload.identifier }, { email: tokenPayload.identifier }] }, "firstname lastname username role avatar")
 
-    if (user.role !== "MASTER") { 
+    if (user.role !== "MASTER") {
       return {
         redirect: { destination: "/" }
       }
