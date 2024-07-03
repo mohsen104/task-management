@@ -5,7 +5,6 @@ import Role from '../modules/Role';
 import Swal from 'sweetalert2';
 
 function AccessUser({ userlist }) {
-  console.log(userlist);
   const roles = ["USER", "ADMIN"];
   const [selected, setSelected] = useState(userlist[0]);
   const [selectedRole, setSelectedRole] = useState(roles[0]);
