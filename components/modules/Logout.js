@@ -5,7 +5,7 @@ import React, { Fragment } from 'react'
 function Logout({ isOpen, setIsOpen }) {
     const router = useRouter();
     async function logoutFetch() {
-        await fetch("http://localhost:3000/api/auth/logout/")
+        await fetch("https://task-management-nine-mu.vercel.app/api/auth/logout/")
             .then(() => {
                 setIsOpen(false)
                 router.push("/login");

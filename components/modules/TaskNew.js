@@ -15,7 +15,7 @@ function TaskNew({ isOpen, setIsOpen, members, setTasksReal, role, _id }) {
     const [selected, setSelected] = useState(people[0]);
 
     async function taskNewFetch(values) {
-        const res = await fetch("http://localhost:3000/api/tasks/", {
+        const res = await fetch("https://task-management-nine-mu.vercel.app/api/tasks/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

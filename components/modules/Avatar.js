@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 function Avatar({ isOpenAv, setIsOpenAv, _id, avatarDefault, setAvatarDefault }) {
     const [avatarValue, setAvatarValue] = useState(avatarDefault);
     async function avatarFetch() {
-        const res = await fetch("http://localhost:3000/api/users/avatar", {
+        const res = await fetch("https://task-management-nine-mu.vercel.app/api/users/avatar", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

@@ -25,7 +25,7 @@ function TaskEdit({ isOpenTE, setIsOpenTE, title, desc, time, status, _id, link,
     const [selected, setSelected] = useState(statusSelected[0])
 
     async function taskEditFetch(values) {
-        await fetch("http://localhost:3000/api/tasks/taskid/" + _id, {
+        await fetch("https://task-management-nine-mu.vercel.app/api/tasks/taskid/" + _id, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

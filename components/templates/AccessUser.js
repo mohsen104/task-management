@@ -10,7 +10,7 @@ function AccessUser({ userlist }) {
   const [selected, setSelected] = useState(userlist[0]);
   const [selectedRole, setSelectedRole] = useState(roles[0]);
   async function accessFetch() {
-    const res = await fetch("http://localhost:3000/api/users/accessuser", {
+    const res = await fetch("https://task-management-nine-mu.vercel.app/api/users/accessuser", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

@@ -8,7 +8,7 @@ function Signup({ setSign }) {
   const router = useRouter();
 
   async function signupFetch(values) {
-    const res = await fetch("http://localhost:3000/api/auth/signup/", {
+    const res = await fetch("https://task-management-nine-mu.vercel.app/api/auth/signup/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

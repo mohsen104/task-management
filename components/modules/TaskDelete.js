@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 function TaskDelete({ isOpenTD, setIsOpenTD, _id, setTasksReal, userid }) {
     const router = useRouter();
     async function taskDeleteFetch() {
-        await fetch("http://localhost:3000/api/tasks/taskid/" + _id, { method: "DELETE" })
+        await fetch("https://task-management-nine-mu.vercel.app/api/tasks/taskid/" + _id, { method: "DELETE" })
             .then(() => {
                 setIsOpenTD(false)
                 if (router.pathname == "/") {

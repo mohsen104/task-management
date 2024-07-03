@@ -14,7 +14,7 @@ function index({ user, tasklist, setOnlineUsers }) {
 
   useEffect(() => {
     const socketInitializer = async () => {
-      await fetch('http://localhost:3000/api/socket');
+      await fetch('https://task-management-nine-mu.vercel.app/api/socket');
 
       socket = io()
 
@@ -90,7 +90,7 @@ export async function getServerSideProps(context) {
 
     const user = await model.findOne({ $or: [{ username: tokenPayload.identifier }, { email: tokenPayload.identifier }] }, "firstname lastname username role avatar")
 
-    const resTasks = await fetch("http://localhost:3000/api/tasks");
+    const resTasks = await fetch("https://task-management-nine-mu.vercel.app/api/tasks");
     const tasklist = await resTasks.json();
 
     return {
