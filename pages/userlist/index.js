@@ -15,7 +15,7 @@ function index({ user, userlist, onlineUsers, setOnlineUsers }) {
     const socketInitializer = async () => {
       await fetch('https://task-management-nine-mu.vercel.app/api/socket');
 
-      socket = io()
+      socket = io("https://task-management-nine-mu.vercel.app")
 
       socket.on('connect', () => {
         console.log('connected')

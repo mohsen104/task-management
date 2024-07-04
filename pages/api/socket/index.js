@@ -8,7 +8,7 @@ const SocketHandler = (req, res) => {
     } else {
         console.log('Socket is initializing')
         const io = new Server(res.socket.server)
-        res.socket.server.io = io
+        res.socket.server.io = io;
 
         io.on('connection', (socket) => {
             // add new user
