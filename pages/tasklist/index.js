@@ -1,61 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Sidebar from '@/components/templates/Sidebar';
 import Navbar from '@/components/templates/Navbar';
-import Swal from 'sweetalert2';
 import ConnectToDB from '@/configs';
 import { verify } from 'jsonwebtoken';
 import model from '@/models/user';
 import Tasklist from '@/components/templates/Tasklist';
-import { io } from 'socket.io-client';
-let socket;
 
-function index({ user, tasklist, setOnlineUsers }) {
+function index({ user, tasklist }) {
   const [tasksReal, setTasksReal] = useState(tasklist);
-
-  useEffect(() => {
-    const socketInitializer = async () => {
-      await fetch('https://task-management-nine-mu.vercel.app/api/socket');
-
-      socket = io("https://task-management-nine-mu.vercel.app")
-
-      socket.on('connect', () => {
-        console.log('websocket connected')
-      })
-
-      socket.emit("new-user-add", user._id);
-
-      socket.on("get-users", (users) => {
-        setOnlineUsers(users);
-      });
-    }
-    socketInitializer();
-  }, [])
-
-  useEffect(() => {
-    // Tab has focus
-    const handleFocus = async () => {
-      socket.emit("new-user-add", user._id);
-      socket.on("get-users", (users) => {
-        setOnlineUsers(users);
-      });
-    };
-
-    // Tab closed
-    const handleBlur = () => {
-      if (user) {
-        socket.emit("offline")
-      }
-    };
-
-    // Track if the user changes the tab to determine when they are online
-    window.addEventListener('focus', handleFocus);
-    window.addEventListener('blur', handleBlur);
-
-    return () => {
-      window.removeEventListener('focus', handleFocus);
-      window.removeEventListener('blur', handleBlur);
-    };
-  }, [user]);
 
   return (
     <>
